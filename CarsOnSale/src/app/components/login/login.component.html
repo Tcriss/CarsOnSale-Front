@@ -1,0 +1,50 @@
+<title>CarsOnSale - Login</title>
+<section class="login">
+
+  <div class="logo">
+    <img src="./assets/logo.png" alt="Logo">
+  </div>
+
+  <aside>
+    <h1>Login</h1>
+
+    <p class="description">A new way to experience real state in the infinite virtual space.</p>
+
+    <div class="formulary">
+
+      <form (ngSubmit)="login()" [formGroup]="user">
+
+        <div class="textbox">
+          <label for="email">Email</label>
+          <input type="email" formControlName="email" placeholder="E-mail">
+        </div>
+        <div class="textbox">
+          <label for="password">Password</label>
+          <input type="password" formControlName="password" placeholder="Password">
+        </div>
+        <div class="remember-forget">
+          <div class="check">
+            <input type="checkbox" name="check" id="check">
+            <label for="check">Remember me</label>
+          </div>
+          <a href="#">Forgot password</a>
+        </div>
+        <div class="action-buttons">
+          <button class="log" type="submit">Login</button>
+          <a [routerLink]="['/register']"><button class="sign">Sign Up</button></a>
+        </div>
+
+      </form>
+
+      <div class="other-login-options">
+        <p>Or, login with</p>
+        <div>
+          <a href="#">Facebook</a>
+          <a href="#">Linked In</a>
+          <a href="#">Google</a>
+        </div>
+      </div>
+
+    </div>
+  </aside>
+</section>

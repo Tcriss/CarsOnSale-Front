@@ -1,0 +1,54 @@
+<title>CarsOnSale - Register</title>
+<section class="login">
+    <div class="logo">
+      <img src="./assets/logo.png" alt="Logo">
+    </div>
+  
+    <aside>
+      <h1>Sing Up</h1>
+      <p class="description">Create an account and start expiriencing a new way of real state in the infinite virtual space.</p>
+      <div class="formulary">
+        <form (ngSubmit)="register()" [formGroup]="registerUser">
+            <div class="textbox">
+                <label for="userN">User Name</label>
+                <input type="text" formControlName="userName" placeholder="Har@l99">
+            </div>
+            <div class="textbox">
+                <label for="name">Name</label>
+                <input type="text" formControlName="name" placeholder="Complete name">
+            </div>
+            <div class="textbox">
+                <label for="email">Email</label>
+                <input type="email" formControlName="email" placeholder="E-mail">
+            </div>
+            <div class="textbox">
+                <label for="password">Password</label>
+                <input type="password" formControlName="password" placeholder="Password">
+            </div>
+            <div class="textbox">
+                <label for="rpassword">Repeat password</label>
+                <input type="password" formControlName="repeatPassword" placeholder="Password">
+            </div>
+            <div class="textbox">
+                <label for="phone">Phone</label>
+                <input type="text" formControlName="phone" placeholder="Phone number">
+            </div>
+            <div class="action-buttons">
+                <button class="log" type="submit">Login</button>
+                <a [routerLink]="['/login']"><button class="sign">I already have an account</button></a>
+            </div>
+  
+        </form>
+        <div class="other-login-options">
+          <p>Or, login with</p>
+  
+          <div>
+            <a href="#">Facebook</a>
+            <a href="#">Linked In</a>
+            <a href="#">Google</a>
+          </div>
+        </div>
+
+      </div>
+    </aside>
+</section>
