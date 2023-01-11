@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent, pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent},
+  { path: 'forgatten-password', component: ForgattenPasswordComponent },
   { path: '**', redirectTo: 'home', pathMatch: 'full' },
 ];
 

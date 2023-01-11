@@ -21,9 +21,15 @@ header{
   .container{
     display: none;
     width: 100%;
+    background-color: #191A24;
 
     @include mobile{
       display: block;
+    }
+
+    .bcolor{
+      background-color: #191A24;
+      height: 70px;
     }
 
     .body{
@@ -130,10 +136,12 @@ header{
   }
 
   .NBar{
-    width: 90%;
+    width: 100%;
+    margin: 0px 47px;
     display: grid;
     grid-template-areas: 'logo navBar men';
     position: fixed;
+    background-color: #191A24;
 
     @include mobile{
       display: none;

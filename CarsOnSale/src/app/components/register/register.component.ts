@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AlertsService } from 'src/app/services/alerts.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -11,8 +12,12 @@ import { AlertsService } from 'src/app/services/alerts.service';
 export class RegisterComponent {
   registerUser: FormGroup;
 
-  constructor(private fb: FormBuilder, 
-    private afAuth: AngularFireAuth, public alerts:AlertsService) {
+  constructor(
+    private fb: FormBuilder, 
+    private auth: AngularFireAuth, 
+    public alerts:AlertsService, 
+    private router:Router
+    ) {
     this.registerUser = this.fb.group({
       userName: [''],
       name: [''],
@@ -39,9 +44,10 @@ export class RegisterComponent {
       return;
     }
 
-    this.afAuth.createUserWithEmailAndPassword(email,password)
+    this.auth.createUserWithEmailAndPassword(email,password)
     .then(user => {
       this.alerts.notifications('User successfully registered','','success');
+      this.router.navigate(['/login']);
     })
     .catch(error => {
       var errorCode = error.code;
