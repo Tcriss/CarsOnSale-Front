@@ -1,4 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
 
 @mixin mobile{
   @media only screen and (max-width: 1000px) {
@@ -10,6 +15,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .login {
@@ -47,13 +53,14 @@
       width: 40%;
       height: 92.5vh;
       background: #F4F4F4;
+      overflow-y: scroll;
+      overflow-x: hidden;
 
       @include mobile{
         width: 100%;
       }
 
       h1 {
-          font-family: "Inter";
           font-weight: 600;
           font-size: 22px;
           line-height: 100%;
@@ -63,7 +70,6 @@
       .description {
           width: 407px;
           height: 48px;
-          font-family: "Inter";
           font-weight: 400;
           font-size: 16px;
           line-height: 150%;
@@ -176,7 +182,6 @@
                 .log {
                   background: #3E334E;
                   border-radius: 8px;
-                  font-family: "Inter";
                   font-style: normal;
                   font-weight: 600;
                   font-size: 16px;
@@ -193,7 +198,6 @@
                 .sign {
                   border: 2px solid #3E334E;
                   border-radius: 8px;
-                  font-family: "Inter";
                   font-style: normal;
                   font-weight: 600;
                   font-size: 16px;
@@ -217,11 +221,11 @@
               gap: 16px;
               width: 367px;
               height: 68px;
+              margin-bottom: 10px;
 
               p {
                 width: 367px;
                 height: 14px;
-                font-family: "Inter";
                 font-style: normal;
                 font-weight: 400;
                 font-size: 14px;
@@ -259,7 +263,6 @@
                   height: 38px;
                   border: 1px solid #AFA2C3;
                   border-radius: 4px;
-                  font-family: "Inter";
                   font-style: normal;
                   font-weight: 500;
                   font-size: 14px;

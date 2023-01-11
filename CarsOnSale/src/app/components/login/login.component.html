@@ -27,7 +27,7 @@
             <input type="checkbox" name="check" id="check">
             <label for="check">Remember me</label>
           </div>
-          <a href="#">Forgot password</a>
+          <a [routerLink]="['/forgatten-password']">Forgot password</a>
         </div>
         <div class="action-buttons">
           <button class="log" type="submit">Login</button>
@@ -39,9 +39,8 @@
       <div class="other-login-options">
         <p>Or, login with</p>
         <div>
-          <a href="#">Facebook</a>
-          <a href="#">Linked In</a>
-          <a href="#">Google</a>
+          <a (click)="loginWithGoogle()">Google</a>
+          <a (click)="loginWithMicrosoft()">Microsoft</a>
         </div>
       </div>
 
