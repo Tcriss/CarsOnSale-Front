@@ -1,15 +1,85 @@
-<title>CarsOnSale - Home</title>
-<h1>Pagina para comprar y vender carrito rojo de carrera</h1>
-<p>Welcome to your new single-page application, built with:</p>
-<ul>
-  <li><a href='https://get.asp.net/'>ASP.NET Core</a> and <a href='https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx'>C#</a> for cross-platform server-side code</li>
-  <li><a href='https://angular.io/'>Angular</a> and <a href='http://www.typescriptlang.org/'>TypeScript</a> for client-side code</li>
-  <li><a href='http://getbootstrap.com/'>Bootstrap</a> for layout and styling</li>
-</ul>
-<p>To help you get started, we've also set up:</p>
-<ul>
-  <li><strong>Client-side navigation</strong>. For example, click <em>Counter</em> then <em>Back</em> to return here.</li>
-  <li><strong>Angular CLI integration</strong>. In development mode, there's no need to run <code>ng serve</code>. It runs in the background automatically, so your client-side resources are dynamically built on demand and the page refreshes when you modify any file.</li>
-  <li><strong>Efficient production builds</strong>. In production mode, development-time features are disabled, and your <code>dotnet publish</code> configuration automatically invokes <code>ng build</code> to produce minified, ahead-of-time compiled JavaScript files.</li>
-</ul>
-<p>The <code>ClientApp</code> subdirectory is a standard Angular CLI application. If you open a command prompt in that directory, you can run any <code>ng</code> command (e.g., <code>ng test</code>), or use <code>npm</code> to install extra packages into it.</p>
+<section>
+  <!--  -->
+  <section class="banner">
+    <div class="text">
+      <div class="message">
+        <h1>Aqui encontraras</h1>
+        <h3>el carro de tus sueños!</h3>
+        <p>Miles de personas visitan nuestro sitio web diario en busca de un vehículo que se acomode a sus gustos, ese podría ser el tuyo, ¡asi que, que estas esperando!.</p>
+      </div>
+      <div class="act-btn">
+        <button class="offert-btn">Ver Ofertas</button>
+        <button class="sell-btn">Vender</button>
+      </div>
+    </div>
+    <div class="image">
+      <img src="./assets/carJome.png" alt="">
+    </div>
+  </section>
+  <!--  -->
+  <section class="brands">
+    <header>
+      <div class="text"><h4>Filter by your favorites</h4><h2>BRANDS</h2></div>
+      <div class="button"><button>Ver más</button></div>
+    </header>
+    <section class="bran">
+      <!-- we'll use ngFor for this part -->
+      <div class="brand">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flistcarbrands.com%2Fwp-content%2Fuploads%2F2016%2F02%2Fclassic-chevrolet-logo.jpg&f=1&nofb=1&ipt=4d455f21881b42333a37d0285782ab81f5a5bc9cc3adea501bb0ec7023bfe141&ipo=images">
+      </div>
+      <div class="brand">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.freebiesupply.com%2Flogos%2Flarge%2F2x%2Fmercedes-benz-9-logo-png-transparent.png&f=1&nofb=1&ipt=2c8565b2e64acd79f6956bd63e7ca979780fa9741f9a7a18f14c17a8452a9268&ipo=images">
+      </div>
+      <!--  -->
+    </section>
+  </section>
+  <!--  -->
+  <section class="category">
+    <header>
+      <div class="text"><h4>What's new?</h4><h2>JUST TAKE A LOOK</h2></div>
+      <div class="button"><button>Ver más</button></div>
+    </header>
+    <section class="articles">
+      <!-- we'll use ngFor for this part -->
+      <article>
+        <div class="cover">
+          <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftreasuredcars.com%2Fpublic%2Fuploads%2F2020%2F11%2F14%2Falvis_alvis_speed_20_sa_tourer-1933-20201114214917-2.jpg&f=1&nofb=1&ipt=1522bf08e6ef3f824e809a3ed1c343d436c04e907718d9b4bd18a1b146e5204d&ipo=images" alt="">
+          <p>3,000,000.00 RD$</p>
+        </div>
+        <div class="description">
+          <h4 class="title">1988 - El carrito de tu abuela</h4>
+          <div class="t">
+            <div class="condition">
+              <p class="ti">Condition:</p>
+              <p class="desc">Como fefita</p>
+            </div>
+            <div class="type">
+              <p class="ti">Comb:</p>
+              <p class="desc">Gasolina</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article>
+        <div class="cover">
+          <img src="https://www.idominicanas.com/wp-content/uploads/2020/01/bandera-dominicana-usada-como-lona-en-guagua-platanera.jpg" alt="">
+          <p>12,000.00 RD$</p>
+        </div>
+        <div class="description">
+          <h4 class="title">2021 - La guagua platanera xd</h4>
+          <div class="t">
+            <div class="condition">
+              <p class="ti">Condition:</p>
+              <p class="desc">Aguanta ma que tu</p>
+            </div>
+            <div class="type">
+              <p class="ti">Comb:</p>
+              <p class="desc">Gasolina</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <!--  -->
+    </section>
+  </section>
+</section>
