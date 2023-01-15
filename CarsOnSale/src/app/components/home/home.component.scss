@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+//---variables
+$text-white: white;
+$text-white-purple: #B1B5DB;
+$outfit-font: 'Outfit', sans-serif;;
+$poppins-font: 'Poppins', sans-serif;;
+//---responsive
+@mixin mobile {
+    @media only screen and (max-width: 820px) {
+      @content;
+    }
+  }
+
+  @mixin mobile2 {
+    @media only screen and (max-width: 550px) {
+      @content;
+    }
+  }
+
+section{
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+
+    button{
+        width: 138px;
+        height: 44px;
+        padding: 10px 0px;
+        border-radius: 40px;
+        border: solid black;
+    }
+
+    .banner{
+        width: 100%;
+        height: 100vh;
+        padding: 0px 200px;
+        background-image: url(../../../assets/HerroBanner.png);
+        color: $text-white;
+        font-family: $outfit-font;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(520px,1fr));
+        place-content: center;
+
+        @include mobile2{
+            padding: 0px 30px;
+        }
+
+        .text{
+            .message{
+                width: 467px;
+
+                h1{
+                    padding-top: 60px;
+                    font-size: 60px;
+                    font-weight: 700;
+                    color: $text-white-purple;
+                }
+                h3{
+                    font-size: 46px;
+                    font-weight: 700;
+                    color: $text-white-purple;
+                }
+                p{
+                    padding: 30px 0px 5px 0px;
+                    font-family: $poppins-font;
+                    font-size: 15px;
+                }
+            }
+            .act-btn{
+                width: 385px;
+    
+                button{
+                    width: 163px;
+                    padding: 10px 0px;
+                    margin-right: 20px;
+                    border: solid rgb(210, 210, 210);
+                }
+
+                .offert-btn{
+                    background-color: #00345900;
+                    color: white;
+                }
+
+                .sell-btn{
+                    background-color: #003459;
+                    color: white;
+                }
+            }
+        }
+        .image{
+            height: 100%;
+            display: flex;
+            justify-content: center;
+
+            img{
+                width: 700px;
+                @include mobile{
+                    width: 500px;
+                }
+            }
+        }
+    }
+
+    .brands{
+        width: 100%;
+        padding: 60px 200px;
+
+        @include mobile{
+            padding: 0px;
+        }
+
+        header{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            .text{
+
+                h4{
+                    font-family: $poppins-font;
+                    font-size: 15px;
+                    padding-left: 10px;
+                    padding: 0px;
+                }
+                h2{
+                    font-family: $poppins-font;
+                    font-weight: 700;
+                    font-size: 24px;
+                }
+            }
+            .button{
+                display: flex;
+                justify-content: end;
+            }
+        }
+
+        .bran{
+            width: 100%;
+            display: flex;
+            gap: 100px;
+
+            .brand{
+                width: 90px;
+                display: flex;
+                justify-content: center;
+                transition: all 500ms;
+                border-radius: 300px;
+                
+                img{
+                    width: 100%;
+                }
+
+                &:hover{
+                    box-shadow: 0px 0px 6px black;
+                }
+            }
+        }
+    }
+
+    .category{
+        width: 100%;
+        padding: 60px 200px;
+
+        @include mobile{
+            padding: 0px;
+        }
+
+        header{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            .text{
+
+                h4{
+                    font-family: $poppins-font;
+                    font-size: 15px;
+                    padding-left: 10px;
+                    padding: 0px;
+                }
+                h2{
+                    font-family: $poppins-font;
+                    font-weight: 700;
+                    font-size: 24px;
+                }
+            }
+            .button{
+                display: flex;
+                justify-content: end;
+            }
+        }
+    }
+
+    .articles{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+        gap: 20px;
+        
+        article{
+            border-radius: 5px;
+            padding: 15px;
+            background-color: #ffffff;
+
+            .cover{
+                border-radius: 5px;
+                width: 100%;
+                position: relative;
+                margin-bottom: 10px;
+
+                img{
+                    border-radius: 5px;
+                    width: 100%;
+                }
+                p{
+                    font-family: $outfit-font;
+                    position: absolute;
+                    bottom: 0px;
+                    background-color: rgba(0, 0, 0, 0.407);
+                    color: white;
+                    border-radius: 5px;
+                    padding: 5px;
+                }
+
+            }
+
+            .description{
+                width: 100%;
+
+                h4{
+                    font-family: $outfit-font;
+                    font-weight: 600;
+                    font-size: 16px;
+                }
+                .t{
+                    display: flex;
+                    display: flex;
+                    justify-content: space-between;
+
+                    .ti{
+                        font-family: $outfit-font;
+                        margin: 0px;
+                    }
+
+                    .desc{
+                        font-family: $outfit-font;
+                        font-weight: 600;
+                        margin: 0px;
+                    }
+
+                    .condition{
+                        display: flex;
+                    }
+
+                    .type{
+                        display: flex;
+                    }
+                }
+            }
+        }
+    }
+}

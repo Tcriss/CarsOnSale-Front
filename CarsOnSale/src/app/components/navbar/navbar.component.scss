@@ -11,11 +11,10 @@
 }
 
 header{
-  background-color: #191A24;
+  background-color: #191a2400;
   font-family: 'Outfit', sans-serif;
   display: flex;
   justify-content: center;
-  height: 60px;
   color: white;
 
   .container{
@@ -141,7 +140,8 @@ header{
     display: grid;
     grid-template-areas: 'logo navBar men';
     position: fixed;
-    background-color: #191A24;
+    background-color: #191a2400;
+    padding: 0px 195px;
 
     @include mobile{
       display: none;
@@ -180,7 +180,7 @@ header{
           transition: all 500ms;
   
           a{
-            color: rgb(220, 220, 220);
+            color: #A6DAFF;
             text-decoration: none;
             text-align: center;
             font-size: 15px;
@@ -188,8 +188,7 @@ header{
           }
   
           &:hover{
-            background-color: #281146;
-            border-top: 3px solid #7F38E0;
+            border-top: 3px solid #ffffff;
             
             a{
               color: white;
@@ -199,8 +198,7 @@ header{
         }
   
         .link-active{
-          background-color: #281146;
-          border-top: 3px solid #7F38E0;
+          border-top: 3px solid #ffffff;
           
           a{
             color: white;
@@ -219,7 +217,7 @@ header{
         width: 115px;
         padding: 5px;
         border-radius: 40px;
-        background-color: #7F38E0;
+        background-color: #003459;
         list-style-type: none;
         display: flex;
         justify-content: center;
