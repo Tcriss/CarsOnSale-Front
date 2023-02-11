@@ -10,8 +10,18 @@ export class NavbarComponent {
   @ViewChild('navBar') navBar!:ElementRef;
   @ViewChild('navRes') navRes!:ElementRef;
   x = fromEvent(document,'scroll');
+  paths:Array<any>;
 
-  constructor(private renderer:Renderer2){
+  constructor(
+    private renderer:Renderer2,
+    ){
+    this.paths = [
+      {title: 'Home', path: '/home'},
+      {title: 'Vehicles', path: '/vehicles'},
+      {title: 'Sell Car', path: ''},
+      {title: 'Finance', path: ''},
+      {title: 'About', path: ''},
+    ];
     this.x.subscribe((res:any) => {
       const scrollTop = res.target.documentElement.scrollTop;
       if(scrollTop >= 100){
