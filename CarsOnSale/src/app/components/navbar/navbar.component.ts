@@ -9,6 +9,7 @@ import { fromEvent } from 'rxjs';
 export class NavbarComponent {
   @ViewChild('navBar') navBar!:ElementRef;
   @ViewChild('navRes') navRes!:ElementRef;
+  
   x = fromEvent(document,'scroll');
   paths:Array<any>;
 

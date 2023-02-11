@@ -15,6 +15,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { ForgattenPasswordComponent } from './components/forgatten-password/forgatten-password.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { VehiclesComponent } from './components/vehicles/vehicles.component';
+import { ArticlesComponent } from './components/articles/articles.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { VehiclesComponent } from './components/vehicles/vehicles.component';
     RegisterComponent,
     ForgattenPasswordComponent,
     NavbarComponent,
-    VehiclesComponent
+    VehiclesComponent,
+    ArticlesComponent
   ],
   imports: [
     BrowserModule,
