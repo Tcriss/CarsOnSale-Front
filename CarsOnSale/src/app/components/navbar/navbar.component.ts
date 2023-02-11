@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Renderer2, ElementRef, ViewChild } from '@angular/core';
+import { fromEvent } from 'rxjs';
 
 @Component({
   selector: 'app-navbar',
@@ -6,13 +7,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
-  isExpanded = false;
+  @ViewChild('navBar') navBar!:ElementRef;
+  @ViewChild('navRes') navRes!:ElementRef;
+  x = fromEvent(document,'scroll');
 
-  collapse() {
-    this.isExpanded = false;
-  }
-
-  toggle() {
-    this.isExpanded = !this.isExpanded;
+  constructor(private renderer:Renderer2){
+    this.x.subscribe((res:any) => {
+      const scrollTop = res.target.documentElement.scrollTop;
+      if(scrollTop >= 100){
+        this.renderer.setStyle(this.navBar.nativeElement,'background-color','#191a24df');
+        this.renderer.setStyle(this.navRes.nativeElement,'background-color','#191a24df');
+      }else{
+        this.renderer.setStyle(this.navBar.nativeElement,'background-color','#191a2400');
+        this.renderer.setStyle(this.navRes.nativeElement,'background-color','#191a2400');
+      }
+    })
   }
 }
