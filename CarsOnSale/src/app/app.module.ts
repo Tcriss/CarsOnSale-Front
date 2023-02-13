@@ -16,6 +16,7 @@ import { ForgattenPasswordComponent } from './components/forgatten-password/forg
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { VehiclesComponent } from './components/vehicles/vehicles.component';
 import { ArticlesComponent } from './components/articles/articles.component';
+import { BrandsComponent } from './components/brands/brands.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ArticlesComponent } from './components/articles/articles.component';
     ForgattenPasswordComponent,
     NavbarComponent,
     VehiclesComponent,
-    ArticlesComponent
+    ArticlesComponent,
+    BrandsComponent
   ],
   imports: [
     BrowserModule,
