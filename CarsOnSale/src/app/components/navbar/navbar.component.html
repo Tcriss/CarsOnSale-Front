@@ -1,6 +1,6 @@
 <header>
     <div class="container">
-      <nav class="navbar fixed-top bcolor">
+      <nav #navRes class="navbar fixed-top bcolor">
         <div class="container-fluid">
           <div class="menu">
             <li>
@@ -21,35 +21,10 @@
             <div class="offcanvas-body">
   
               <ul class="navbar-nav justify-content-center NavItems">
-                <li [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{ exact: true }">
-                  <a [routerLink]="['/home']">Home</a>
+
+                <li *ngFor="let path of paths" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{ exact: true }">
+                  <a [routerLink]="[path.path]">{{path.title}}</a>
                 </li>
-          
-                <li [routerLinkActive]="['link-active']">
-                  <a [routerLink]="">Vehicles</a>
-                </li>
-                <li [routerLinkActive]="['link-active']">
-                  <a [routerLink]="">Sell Car</a>
-                </li>
-                <li [routerLinkActive]="['link-active']">
-                  <a [routerLink]="">Finance</a>
-                </li>
-                <li [routerLinkActive]="['link-active']">
-                  <a [routerLink]="">About</a>
-                </li>
-                <!-- <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li>
-                      <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  </ul>
-                </li> -->
               </ul>
             </div>
           </div>
@@ -57,26 +32,14 @@
       </nav>
     </div>
   
-    <div class="NBar">
+    <div #navBar class="NBar">
       <div class="logo">
         <a [routerLink]="['/']"><img src="./assets/car.png" alt=""></a>
       </div>
       <nav>
         <ul>
-          <li [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{ exact: true }">
-            <a [routerLink]="['/home']">Home</a>
-          </li>
-          <li [routerLinkActive]="['link-active']">
-            <a [routerLink]="">Vehicles</a>
-          </li>
-          <li [routerLinkActive]="['link-active']">
-            <a [routerLink]="">Sell Car</a>
-          </li>
-          <li [routerLinkActive]="['link-active']">
-            <a [routerLink]="">Finance</a>
-          </li>
-          <li [routerLinkActive]="['link-active']">
-            <a [routerLink]="">About</a>
+          <li *ngFor="let path of paths" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{ exact: true }">
+            <a [routerLink]="[path.path]">{{path.title}}</a>
           </li>
         </ul>
       </nav>

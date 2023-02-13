@@ -17,7 +17,7 @@ export class LoginComponent {
   constructor(
     private fb: FormBuilder, 
     private auth: AngularFireAuth, 
-    public alerts:AlertsService, 
+    public alerts:AlertsService,
     private router:Router
     ){
     this.user = this.fb.group({

@@ -1,0 +1,19 @@
+<article *ngFor="let article of articles">
+    <div class="cover">
+      <img src="{{article.img}}" alt="">
+      <p>{{article.price}}</p>
+    </div>
+    <div class="description">
+      <h4 class="title">{{article.title}}</h4>
+      <div class="t">
+        <div class="condition">
+          <p class="ti">Condition:</p>
+          <p class="desc">{{article.state}}</p>
+        </div>
+        <div class="type">
+          <p class="ti">Comb:</p>
+          <p class="desc">{{article.type}}</p>
+        </div>
+      </div>
+    </div>
+  </article>

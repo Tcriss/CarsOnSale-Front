@@ -14,6 +14,9 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ForgattenPasswordComponent } from './components/forgatten-password/forgatten-password.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { VehiclesComponent } from './components/vehicles/vehicles.component';
+import { ArticlesComponent } from './components/articles/articles.component';
+import { BrandsComponent } from './components/brands/brands.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     LoginComponent,
     RegisterComponent,
     ForgattenPasswordComponent,
-    NavbarComponent
+    NavbarComponent,
+    VehiclesComponent,
+    ArticlesComponent,
+    BrandsComponent
   ],
   imports: [
     BrowserModule,
